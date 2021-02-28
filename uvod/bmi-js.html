@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Výpočet BMI</title>
+    <script>
+function spocitejBMI() {
+    var vaha = document.getElementById("vaha").value;
+    var vyska = document.getElementById("vyska").value;
+    var result = document.getElementById("result");
+    result.innerHTML = (vaha / Math.pow(vyska / 100, 2)).toPrecision(4);        
+}
+    </script>
+  </head>
+  <body>
+    <h1>Výpočet BMI</h1>
+
+    Váha: <input id="vaha"><br>
+    Výška: <input id="vyska"><br>
+
+    <button onclick="spocitejBMI()">Spočítej BMI</button>  
+
+    <h2>Vaše BMI je <span id="result"></span></h2>
+
+  </body>
+</html>
