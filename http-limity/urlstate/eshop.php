@@ -14,14 +14,14 @@
   // aktualizace košíku, pokud bylo něco přidáno
   if (isset($_REQUEST["pridej"]))
   {
-      if (isset($kosik[$_REQUEST["pridej"]]))
-      {
-        $kosik[$_REQUEST["pridej"]]++;
-      }
-      else
-      {
-        $kosik[$_REQUEST["pridej"]] = 1;
-      }
+    if (isset($kosik[$_REQUEST["pridej"]]))
+    {
+    $kosik[$_REQUEST["pridej"]]++;
+    }
+    else
+    {
+    $kosik[$_REQUEST["pridej"]] = 1;
+    }
   }
 ?>
 <!DOCTYPE html>
@@ -37,8 +37,8 @@
 
         <ul>
 <?php
-foreach ($zbozi as $z) {
-    echo "<li>" . $z . " <a href='?pridej=$z&" . http_build_query($kosik) . "'>Přidej do košíku</a></li>";
+  foreach ($zbozi as $z) {
+    echo "<li>" . $z . " – <a href='?pridej=$z&" . http_build_query($kosik) . "'>přidej do košíku</a></li>";
 }
 ?>
         </ul>
@@ -47,8 +47,8 @@ foreach ($zbozi as $z) {
 
         <ul>
 <?php
-foreach ($kosik as $z => $pocet) {
-    echo "<li>" . $z . " " . $pocet . " ks</li>";
+  foreach ($kosik as $z => $pocet) {
+    echo "<li>" . $z . " – " . $pocet . " ks</li>";
 }
 ?>
         </ul>
