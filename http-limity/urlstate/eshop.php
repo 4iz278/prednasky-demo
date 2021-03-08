@@ -12,7 +12,7 @@
   }
 
   // aktualizace košíku, pokud bylo něco přidáno
-  if ($_REQUEST["pridej"])
+  if (isset($_REQUEST["pridej"]))
   {
       if (isset($kosik[$_REQUEST["pridej"]]))
       {
