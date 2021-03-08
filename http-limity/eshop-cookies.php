@@ -41,7 +41,7 @@
         <ul>
 <?php
   foreach ($zbozi as $z) {
-    echo "<li>" . $z . " – <a href='?pridej=$z'>přidej do košíku</a></li>";
+    echo "<li>" . $z . " – <a href='?pridej=$z'>přidej do košíku</a></li>\n";
 }
 ?>
         </ul>

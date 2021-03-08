@@ -42,7 +42,7 @@
   if (isset($_SESSION['kosik']))
   {
     foreach ($_SESSION['kosik'] as $z => $pocet) {
-        echo "<li>" . $z . " – " . $pocet . " ks</li>";
+        echo "<li>" . $z . " – " . $pocet . " ks</li>\n";
   }
 }
 ?>
