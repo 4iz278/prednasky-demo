@@ -5,7 +5,7 @@
   // obnovení stavu košíku z URL
   foreach($zbozi as $z)
   {
-    if (is_numeric($_REQUEST[$z]))
+    if (isset($_REQUEST[$z]) && is_numeric($_REQUEST[$z]))
     {
       $kosik[$z] = $_REQUEST[$z];
     }
@@ -52,6 +52,6 @@ foreach ($kosik as $z => $pocet) {
 }
 ?>
         </ul>
-        
+
     </body>
 </html>
