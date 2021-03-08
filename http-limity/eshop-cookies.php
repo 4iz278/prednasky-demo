@@ -34,7 +34,7 @@
         <title>Eshop roku</title>
     </head>
     <body>
-        <h1>Eshop roku – stav držíme v URL</h1>
+        <h1>Eshop roku – stav držíme v cookies</h1>
 
         <h2>Katalog</h2>
 
