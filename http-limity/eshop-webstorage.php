@@ -28,6 +28,10 @@
                     kosik.innerHTML += "<li>" + key + " - " + value + "</li>";
                 }
             }
+
+            window.onload = function() {
+                zobrazKosik();
+            }
         </script>
     </head>
     <body>
