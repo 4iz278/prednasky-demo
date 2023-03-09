@@ -31,7 +31,7 @@
         </script>
     </head>
     <body>
-        <h1>Eshop roku – stav držíme v session</h1>
+        <h1>Eshop roku – stav držíme na klientovi ve Webstorage</h1>
 
         <h2>Katalog</h2>
 
