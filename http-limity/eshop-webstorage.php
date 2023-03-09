@@ -10,7 +10,7 @@
             function pridej(zbozi) {
                 var aktualniStav = localStorage.getItem(zbozi);
                 if (aktualniStav != null) {
-                    localStorage.setItem(zbozi, aktualniStav + 1);
+                    localStorage.setItem(zbozi, number(aktualniStav) + 1);
                 } else {
                     localStorage.setItem(zbozi, 1);
                 }
