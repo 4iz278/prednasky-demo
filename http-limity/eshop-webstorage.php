@@ -23,8 +23,8 @@
                 kosik.innerHTML = "";
                 for (var i=0; i<localStorage.length; i++)
                 {
-                    var key = storage.key(i);
-                    var value = storage.getItem(key);
+                    var key = localStorage.key(i);
+                    var value = localStorage.getItem(key);
                     kosik.innerHTML += "<li>" + key + " - " + value + "</li>";
                 }
             }
