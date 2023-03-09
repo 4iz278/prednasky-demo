@@ -15,10 +15,10 @@
                     localStorage.setItem(zbozi, 1);
                 }
 
-                aktualizujKosik();
+                zobrazKosik();
             }
 
-            function aktualizujKosik() {
+            function zobrazKosik() {
                 var kosik = document.getElementById("kosik");
                 kosik.innerHTML = "";
                 for (var i=0; i<localStorage.length; i++)
