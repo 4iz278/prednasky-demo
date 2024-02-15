@@ -7,26 +7,21 @@
 
 window.onload = function() {
   var button = document.getElementById("btn");
-  button.onclick = function() {
-    xhr = new XMLHttpRequest();
-    xhr.onreadystatechange = function() {
-      if (xhr.readyState === XMLHttpRequest.DONE) {
-        if (xhr.status === 200) {
-          var data = JSON.parse(xhr.response);
-          var result = document.getElementById("result");
-          result.innerHTML = data.bmi;
-        } else {
-          alert("Server error: " + xhr.status);
-        }
-      }
-    }
-    xhr.open("POST", "bmi-service.php");
-    xhr.setRequestHeader("Content-Type", "application/json");
-    xhr.send(JSON.stringify(
-      {
+  button.onclick = async function() {
+    let response = await fetch("bmi-service.php", {
+      method: "POST", 
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
         vaha: document.getElementById("vaha").value,
         vyska: document.getElementById("vyska").value
-      }));
+      })
+    });
+
+    let data = await response.json();
+    let result = document.getElementById("result");
+    result.innerHTML = data.bmi;
   };
 }
 
