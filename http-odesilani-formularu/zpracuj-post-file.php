@@ -15,3 +15,11 @@ Kam byl soubor na serveru dočasně uložen: <?php echo $_FILES['image']['tmp_na
 Kód zpracování uploadu: <?php echo $_FILES['image']['error']?> <br/>
 Úplná cestu k souboru na klientovi: <?php echo $_FILES['image']['full_path']?> <br/>
 
+<?php
+
+$imageData = file_get_contents($_FILES['image']['tmp_name']);
+
+echo "<img src='data:{$_FILES['image']['type']};base64,{base64_encode($imageData)}'/>";
+
+?>
+
