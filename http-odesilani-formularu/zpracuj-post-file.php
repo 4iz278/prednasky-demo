@@ -20,7 +20,7 @@ Kód zpracování uploadu: <?php echo $_FILES['image']['error']?> <br/>
 $imageData = file_get_contents($_FILES['image']['tmp_name']);
 $encodedImageData = base64_encode($imageData);
 
-echo "<img src='data:{$_FILES['image']['type']};base64,{$encodedImageData}'/>";
+echo "<img src='data:{$_FILES['image']['type']};base64,{$encodedImageData}' width='100%'/>";
 
 ?>
 
